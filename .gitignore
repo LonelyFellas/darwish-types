@@ -1,0 +1,7 @@
+# dependencies
+node_modules
+# optional
+.idea
+
+# lock file
+pnpm-lock.yaml
