@@ -24,4 +24,3 @@ namespace TestTypes {
   type type21 = Expect<Equal<Math.Add<100, -1>, 99>>;
   type type22 = Expect<Equal<Math.Add<291, -290>, 1>>;
 }
-type A = Math.Add<-100, 99>;

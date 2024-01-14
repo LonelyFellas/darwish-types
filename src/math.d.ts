@@ -150,11 +150,7 @@ export declare namespace Math {
     Temp1 extends any[] = [],
     Temp2 extends any[] = [],
     Temp3 extends any[] = []
-  > = Temp1["length"] extends B
-    ? Temp2["length"] extends A
-      ? Temp3["length"]
-      : Subtract<A, B, Temp1, [...Temp2, A], [...Temp3, B]>
-    : Subtract<A, B, [...Temp1, B], [...Temp2, A]>;
+  > = Add<A, Negation<B>>;
 
   /**
    * @description 两个数比较大小 A > B 返回 true 否则返回 false
@@ -186,7 +182,9 @@ export declare namespace Math {
   /**
    * @description 一个数字取反
    */
-  type Negation<T extends number> = IsNegative<T> extends true
+  type Negation<T extends number> = IsZero<T> extends true
+    ? 0
+    : IsNegative<T> extends true
     ? Abs<T>
     : Darwish.ToNumber<`-${T}`>;
   /**
