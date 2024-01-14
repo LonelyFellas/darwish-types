@@ -144,13 +144,7 @@ export declare namespace Math {
       : SubtractTwoNumberBothPositiveAndAGreaterB<A, Math.Abs<B>>
     : SumTwoNumberBothNegative<A, B>;
 
-  type Subtract<
-    A extends number,
-    B extends number,
-    Temp1 extends any[] = [],
-    Temp2 extends any[] = [],
-    Temp3 extends any[] = []
-  > = Add<A, Negation<B>>;
+  type Subtract<A extends number, B extends number> = Add<A, Negation<B>>;
 
   /**
    * @description 两个数比较大小 A > B 返回 true 否则返回 false
