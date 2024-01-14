@@ -15,6 +15,7 @@ declare namespace Darwish {
     : false;
   /**
    * @description 将一个类型变成增长数字的数组
+   * @be_care 限制1000
    * @example Iteraor<number, 5> --> [1, 2, 3, 4, 5]
    */
   type Iteraor<
